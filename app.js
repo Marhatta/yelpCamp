@@ -17,7 +17,9 @@ var commentRoutes       =require("./routes/comments"),
     indexRoutes         =require("./routes/index");
     
 
-mongoose.connect("mongodb://localhost/yelp_camp"); 
+//mongoose.connect("mongodb://localhost/yelp_camp"); 
+mongoose.connect("mongodb://vishal:Vishal%401996@ds133202.mlab.com:33202/yelpcamp_vishal"); 
+//@ in password is replaced by %40 because mongo oes not support @ in password
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
