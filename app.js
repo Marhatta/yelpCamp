@@ -16,10 +16,8 @@ var commentRoutes       =require("./routes/comments"),
     campgroundRoutes    =require("./routes/campgrounds"),
     indexRoutes         =require("./routes/index");
     
-
-mongoose.connect(process.env.DATABASEURL); //environment variable for local db
-//mongoose.connect("mongodb://vishal:Vishal%401996@ds133202.mlab.com:33202/yelpcamp_vishal"); 
-//@ in password is replaced by %40 because mongo oes not support @ in password
+var url=process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect(url);//environment variable for db
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));

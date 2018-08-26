@@ -1,6 +1,6 @@
 <% include ../partials/header %>
 
-<div class="container">
+<div class="container-fluid">
     <header class="jumbotron">
         <div class="container">
         <h1>Welcome to YelpCamp</h1>
@@ -14,7 +14,7 @@
     <div class="row text-center" style="display:flex;flex-wrap:wrap;">
         
         <% campgrounds.forEach(function(campground){ %>
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-3 col-sm-4 col-xs-6">
             <div class="thumbnail">
             <img src=" <%= campground.image %>" >
             <div class="caption">
